@@ -37,10 +37,10 @@ def categorize(sub_cont):
                      dukes = 0, harleys = 0, kawas = 0, other = 0)
                      #will count posts in these value-ints of brands
                      
-    for post in sub_cont:     #iter thru posts in BGW
-        for i in brand_ids.keys():  #iter thru brands of interest
-            for term in brand_ids.get(i):   #iter thru terms in brandlist
-                if term in post:            #if brand term in post
+    for post in sub_cont:     
+        for i in brand_ids.keys():  
+            for term in brand_ids.get(i):   
+                if term in post:           
                     class_dict[i] = class_dict.get(i) + 1 #count
     
     return class_dict
